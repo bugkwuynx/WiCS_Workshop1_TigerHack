@@ -15,7 +15,7 @@ app.use(cors());
 // Connect to MongoDB
 
 // Connect to routes
-
+app.use("/api/books", bookRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
