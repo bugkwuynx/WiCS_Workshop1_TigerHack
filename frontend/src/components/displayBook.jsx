@@ -33,12 +33,14 @@ const DisplayBook = () => {
 
 
     // handleCreate
-
+    const handleCreate = (newBook) => {
+        setBooks((prevBooks) => [...prevBooks, newBook]);
+    }
 
     return (
         <>
             {/* create book form */}
-            
+            <CreateBook onCreate={handleCreate}/>
             {/* display books */}
             <div style={{ margin: "20px", maxWidth: "800px", width: "100%", marginLeft: "auto", marginRight: "auto" }}>
                 {/* Display books */}
